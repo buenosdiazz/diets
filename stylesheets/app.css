@@ -1,14 +1,25 @@
-img.animated-gif{
-  max-width: 100%;
-  height: auto;
+header {
+  height: 100%;
+  min-height: 500px;
 }
+/* line 60, ../scss/app.scss */
 
-
-.hero_image {
-     max-width: 100%;
-    height: auto;
+/* line 73, ../scss/app.scss */
+header .hero_image .row {
+  position: absolute;
+  height: 95%;
 }
+/* line 77, ../scss/app.scss */
 
+/* line 83, ../scss/app.scss */
+header .hero_image {
+  height: 95%;
+  background-image: url(../img/diets.gif), url(../img/backup);
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+}
 
 
 .dropbtn {
@@ -68,7 +79,7 @@ img.animated-gif{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 50%;
 }
 
 .center2 {
@@ -78,7 +89,12 @@ img.animated-gif{
     width: 77%;
 }
 
-
+.center3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
 
 
 /* line 431, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -9837,10 +9853,7 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
-/* line 20, ../scss/app.scss */
-body {
-  min-width: 1280px;
-}
+
 
 /* line 23, ../scss/app.scss */
 h1 {
@@ -9889,28 +9902,7 @@ ol {
 }
 
 /* line 57, ../scss/app.scss */
-header {
-  height: 100%;
-  min-height: 500px;
-}
-/* line 60, ../scss/app.scss */
 
-/* line 73, ../scss/app.scss */
-header .hero_image .row {
-  position: absolute;
-  height: 95%;
-}
-/* line 77, ../scss/app.scss */
-
-/* line 83, ../scss/app.scss */
-header .hero_image {
-  height: 95%;
-  background-image: url(../img/diets.gif), url(../img/backup);
-  background-attachment: fixed;
-  background-repeat:no-repeat;
-background-size:contain;
-background-position:center;
-}
 
 /* line 92, ../scss/app.scss */
 footer {

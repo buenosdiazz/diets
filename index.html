@@ -73,12 +73,13 @@
 
 <body>
 
-    <header>
+
+      <header>
         <div class="hero_image">
 
         </div>
     </header>
-
+  
 
 
     <div class="container">
@@ -103,9 +104,9 @@
 
         <div class="container">
             <br><br>
-            <img src="https://i.ibb.co/vPkBbZN/Untitled-Artwork-3.png" alt="Untitled-Artwork-3" border="0" class="center, img-fluid" width="600">
+            <img src="https://i.ibb.co/vPkBbZN/Untitled-Artwork-3.png" alt="Untitled-Artwork-3" border="0" class="center, img-fluid" width="">
             <p>Wyoming searches for dieting the most. The top five states that search for diets are: Wyoming, West Virginia, Mississippi, Kentucky, and Arkansas. Hover over each state to view the search index value.</p>
-            <div class="center" id="map"></div>
+            <div class="center, img-fluid" id="map"></div>
             <div id='test'></div>
         </div>
 
@@ -140,7 +141,7 @@
 
             </div>
 
-            <div class="center" id="changing_bars"></div>
+            <div class="center, img-fluid" id="changing_bars"></div>
             <br><br>
         </div>
 
@@ -160,7 +161,7 @@
 
 
         <div class="container">
-            <br><br>
+
 
             <img src="https://i.ibb.co/17zdDHL/Untitled-Artwork-27.png" alt="Untitled-Artwork-27" border="0" class="center, img-fluid" width="">
 
@@ -184,7 +185,8 @@
 
             <img id="imageToSwap" class="profile, center" src="https://image.ibb.co/kosGFL/Untitled-Artwork-11.png">
 
-
+            </div>
+            
 
 
 
@@ -219,6 +221,18 @@
            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script> 
+      var screenWidth = window.innerWidth;
+var visibleElements = jQuery(":visible");
+visibleElements.each(function(){
+    var $this = jQuery(this);
+    if($this.width() > screenWidth){
+        $this.css("border", "1px solid green");
+        console.log("Screen width is " + screenWidth + " and the following element is " + $this.width(), $this);
+    }
+});          
+                </script>
 
 
 </body>
