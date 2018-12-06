@@ -9917,7 +9917,7 @@ header .hero_image .row {
 /* line 83, ../scss/app.scss */
 header .hero_image {
   height: 95%;
-  background-image: url(../img/diets.gif);
+  background-image: url(../img/diets.gif), url(../img/backup);
   background-attachment: fixed;
   background-repeat:no-repeat;
 background-size:contain;
