@@ -1,7 +1,11 @@
-
+img.animated-gif{
+  max-width: 100%;
+  height: auto;
+}
 
 .hero_image {
      max-width: 100%;
+    height: auto;
 }
 
 img { max-width: 100%; }
@@ -8017,7 +8021,7 @@ p {
     max-width: 49rem;
     margin: 0 auto;
     margin-bottom: 1.3em;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.7;
     font-weight: 400;
 }
