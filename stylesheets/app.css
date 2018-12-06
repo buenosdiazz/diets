@@ -9909,7 +9909,7 @@ header p {
 }
 /* line 73, ../scss/app.scss */
 header .hero_image .row {
-  position: relative;
+  position: fixed;
   height: 95%;
 }
 /* line 77, ../scss/app.scss */
