@@ -8014,10 +8014,10 @@ a img {
 /* line 237, ../bower_components/foundation/scss/foundation/components/_type.scss */
 p {
   font-family: 'Lato', sans-serif;
-    max-width: 40rem;
+    max-width: 49rem;
     margin: 0 auto;
     margin-bottom: 1.3em;
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 1.7;
     font-weight: 400;
 }
