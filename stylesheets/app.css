@@ -14,7 +14,7 @@ header {
 
 /* line 73, ../scss/app.scss */
 header .hero_image .row {
-  position: absolute;
+  position: ab solute;
   height: 95%;
 }
 /* line 77, ../scss/app.scss */
@@ -82,6 +82,12 @@ background-position:center;
     margin: 0;
 }
 
+.center1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
 
 .center {
     display: block;
