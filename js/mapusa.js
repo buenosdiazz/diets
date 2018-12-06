@@ -7,7 +7,9 @@ var height = 500;
 
 var svg2 = d3.select('#map').append('svg')
     .attr('width', width)
-    .attr('height', height);
+    .attr('height', height)
+     .call(responsivefy);
+
     
 
 var projection = d3.geo.albersUsa()
@@ -64,10 +66,6 @@ function getContent(d) {
      });
      return content 
 }
-    
-
-
-function loaded(error, usa, dieting) {
 
         function responsivefy(svg) {
     // get container + svg aspect ratio
@@ -95,6 +93,11 @@ function loaded(error, usa, dieting) {
         svg.attr("height", Math.round(targetWidth / aspect));
     }
 }
+
+
+function loaded(error, usa, dieting) {
+
+
     //console.log(usa);
     //console.log(mortality);
 
@@ -137,15 +140,15 @@ function loaded(error, usa, dieting) {
     svg2.append("g")
       .attr("class", "legendLinear")
       .attr("transform", "translate(0,0)");
-
+   
     var legendLinear = d3.legend.color()
       .shapeWidth(30)
       .orient('horizontal')
       .scale(linear);
 
     svg2.select(".legendLinear")
-      .call(legendLinear)
-        .call(responsivefy);
+      .call(legendLinear);
+        
 
 }
 })();
