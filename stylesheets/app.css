@@ -1,3 +1,11 @@
+@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }
+
 header {
   height: 100%;
   min-height: 500px;
@@ -224,7 +232,7 @@ img {
 .mqa-display img,
 .mqa-display embed,
 .mqa-display object {
-  max-width: none !important;
+  max-width: 100% !important;
 }
 
 /* line 532, ../bower_components/foundation/scss/foundation/components/_global.scss */
