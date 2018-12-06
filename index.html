@@ -1,0 +1,222 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <title>Diets 2</title>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Lora:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,300italic,400italic,700|Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+<script src="https://unpkg.com/topojson@3"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+    var topology = topojson.topology({
+        foo: geojson
+    });
+</script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    //----- jQuery Javascript---- //
+    // get the select box element and store it as '$selecBox'
+    var $selectbox = $("#selectbox");
+    // get the image container and store it as '$imageContainer'
+    var $imagecontainer = $(".images");
+    // get the current image selection
+    var selection = $selectbox.data("selected");
+
+    // listen for when the selection changes...
+    // when it does change, run our `changeImageSelection` function
+    $selectbox.on("change", changeImageSelection);
+
+    function changeImageSelection() {
+        // change the `selection` variable to the selected option
+        selection = $selectbox.val();
+        // add a '.loading' class to the $imageContainer
+        $imagecontainer.addClass("loading");
+        // clear the $imageContainer's selected option
+        $imagecontainer[0].dataset.selected = null;
+
+        // set a timout of 1.5 seconds
+        setTimeout(function() {
+            // remove the '.loading' class from $imageContainer
+            $imagecontainer.removeClass("loading");
+            // add the currently selected option to $imageContainer
+            $imagecontainer[0].dataset.selected = selection;
+        }, 1500);
+    }
+
+    // ----- Plain Javascipt ---- //
+    // const selectbox = document.getElementById("selectbox");
+    // const imagecontainer = document.querySelector(".images");
+    // let selection = selectbox.dataset.selected;
+
+    // selectbox.addEventListener("change", e => {
+    //   selection = selectbox.value;
+    //   imagecontainer.classList.add("loading");
+    //   imagecontainer.dataset.selected = "";
+
+    //   setTimeout(() => {
+    //     imagecontainer.classList.remove("loading");
+    //     imagecontainer.dataset.selected = selection;
+    //   }, 1500);
+    // });
+</script>
+
+<body>
+
+    <header>
+        <div class="hero_image">
+
+        </div>
+    </header>
+
+
+
+    <div class="row">
+        <br><br>
+        <img src="https://i.ibb.co/k8Dmw3Y/IMG-0043.png" alt="IMG-0043" class="center"> <br>
+        <p>With so many diets out there that it is hard to keep track of them all — from Whole 30, to the Paleo Diet, to the DASH Diet… the list goes on and on. Diets are talked about on various platforms including newspapers, personal blogs, social media and it seems like new ones emerge every month.
+            <br> </br>
+            While some diets are prescribed for medical reasons, such as controling diabetes or blood pressure, there are also many diets that focus primarily on weight loss.
+            <br> </br>
+            Let’s break-down how Americans search for diets and dieting.</p>
+
+
+        <br><br>
+        <img src="https://i.ibb.co/n3KFvfG/Untitled-Artwork-1.png" alt="Untitled-Artwork-1" border="0" class="center" width="">
+        <p>Search interest for dieting has decreased since 2004. This could be due to the health trends focused on living a healthy life. <br>
+            <Br> According to the CDC: “The key to achieving and maintaining a healthy weight isn't about short‐term dietary changes. It's about a lifestyle that includes healthy eating, regular physical activity, and balancing the number of calories you consume with the number of calories your body uses.”<br>
+            <Br> While dieting has become less popular over time, there are still some trends that exist within the data. <br>
+            <Br> As you can see below, there is a pattern when people in the United States search for diets. This search interest peaks each year in January, most likely due to new years resolutions.There is also a small peak that occurs in the summer months. </p>
+        <img src=img/monthly-01.svg width="" class="center" alt="monthly-01" border="0">
+
+
+
+        <div class="row">
+            <br><br>
+            <img src="https://i.ibb.co/vPkBbZN/Untitled-Artwork-3.png" alt="Untitled-Artwork-3" border="0" class="center" width="600">
+            <p>Wyoming searches for dieting the most. The top five states that search for diets are: Wyoming, West Virginia, Mississippi, Kentucky, and Arkansas. Hover over each state to view the search index value.</p>
+            <div class="center" id="map"></div>
+            <div id='test'></div>
+        </div>
+
+
+
+        <div class="row">
+            <br><br>
+            <img src="https://i.ibb.co/bHzMLHV/IMG-0067.png" alt="IMG-0067" border="0" class="center" width="">
+            <p>Top 15 diets per year.</p>
+
+            <div class="dropdown">
+                <button class="dropbtn">Select a Year &#8964;</button>
+                <div class="dropdown-content">
+                    <button class="plain" id="y2004">2004</button> <br>
+                    <button class="plain" id="y2005">2005</button><br>
+                    <button class="plain" id="y2006">2006</button><br>
+                    <button class="plain" id="y2007">2007</button><br>
+                    <button class="plain" id="y2008">2008</button><br>
+                    <button class="plain" id="y2009">2009</button><br>
+                    <button class="plain" id="y2010">2010</button><br>
+                    <button class="plain" id="y2011">2011</button><br>
+                    <button class="plain" id="y2012">2012</button><br>
+                    <button class="plain" id="y2013">2013</button><br>
+                    <button class="plain" id="y2014">2014</button><br>
+                    <button class="plain" id="y2015">2015</button><br>
+                    <button class="plain" id="y2016">2016</button><br>
+                    <button class="plain" id="y2017">2017</button><br>
+                    <button class="plain" id="y2018">2018</button><br>
+                </div>
+            </div>
+            <div id="buttons_1">
+
+            </div>
+
+            <div class="center" id="changing_bars"></div>
+            <br><br>
+        </div>
+
+
+        <div class="row">
+
+            <img src="https://i.ibb.co/2hR1pg2/Untitled-Artwork-28.png" alt="Untitled-Artwork-28" border="0" class="center" width="">
+            <img src="https://i.ibb.co/Br7cWrj/notlast.png" alt="notlast" border="0" class="center" width="600">
+            <img src=img/southbeach4.svg width="" class="center2" alt="monthly-01" border="0">
+
+            <h2>Recently Popular</h2>
+            <img src=img/keto-03.svg width="" class="center2" alt="monthly-01" border="0">
+
+        </div>
+
+
+        <div class="row">
+            <br><br>
+
+            <img src="https://i.ibb.co/17zdDHL/Untitled-Artwork-27.png" alt="Untitled-Artwork-27" border="0" class="center" width="">
+
+            <ol class="center">
+                Top 5 most searched for diets since 2004 are:
+                <li> Weight Watchers</li>
+                <li> Biggest Loser</li>
+                <li>Keto Diet </li>
+                <li>Whole30</li>
+                <li>Paleo Diet </li>
+
+            </ol>
+
+            <select class="center" onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
+    <option value="https://image.ibb.co/kosGFL/Untitled-Artwork-11.png" selected>Paleo</option>
+    <option value="https://image.ibb.co/nNOWzf/brocoli.png">Atkins</option>
+    <option value="https://image.ibb.co/jhFBzf/grape.png">Weight Watchers</option>
+</select>
+
+            <br><br>
+
+            <img id="imageToSwap" class="profile, center" src="https://image.ibb.co/kosGFL/Untitled-Artwork-11.png">
+
+
+
+
+
+            <footer>
+
+            </footer>
+
+
+
+
+
+
+
+
+
+            <script src="bower_components/jquery/dist/jquery.min.js"></script>
+            <script src="bower_components/foundation/js/foundation.min.js"></script>
+            <script src="js/app.js"></script>
+            <script src="//d3js.org/d3.v3.min.js"></script>
+            <script src="//d3js.org/queue.v1.min.js"></script>
+            <script src="js/d3-legend.min.js"></script>
+            <script src="//d3js.org/topojson.v1.min.js"></script>
+            <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+            <script src="js/tooltip.js"></script>
+            <script src="js/mapusa.js"></script>
+            <script src="js/mfreeman_scroller.js"></script>
+            <script src="js/changing_bars.js"></script>
+
+            <!-- <script src="js/pie_chart_tooltip.js"></script> -->
+            <script src="js/line_chart_tooltip.js"></script>
+
+            <script>
+            </script>
+
+
+</body>
+</html>
