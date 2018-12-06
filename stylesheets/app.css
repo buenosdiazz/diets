@@ -3,12 +3,13 @@ img.animated-gif{
   height: auto;
 }
 
+
 .hero_image {
      max-width: 100%;
     height: auto;
 }
 
-img { max-width: 100%; }
+
 
 .dropbtn {
     background-color: #4CAF50;
@@ -67,7 +68,7 @@ img { max-width: 100%; }
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 65%;
+    width: 80%;
 }
 
 .center2 {
@@ -9893,23 +9894,10 @@ header {
   min-height: 500px;
 }
 /* line 60, ../scss/app.scss */
-header h1 {
-  color: #4C73B8;
-  margin-top: 0;
-  padding-top: 30px;
-  font-size: 4rem;
-}
-/* line 66, ../scss/app.scss */
-header p {
-  color: #52524E;
-  margin-top: 0;
-  padding: 30px 0;
-  font-size: 1.5rem;
-  line-height: 1.1;
-}
+
 /* line 73, ../scss/app.scss */
 header .hero_image .row {
-  position: fixed;
+  position: absolute;
   height: 95%;
 }
 /* line 77, ../scss/app.scss */
