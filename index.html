@@ -103,7 +103,7 @@
                     <Br> According to the CDC: “The key to achieving and maintaining a healthy weight isn't about short‐term dietary changes. It's about a lifestyle that includes healthy eating, regular physical activity, and balancing the number of calories you consume with the number of calories your body uses.”<br>
                     <Br> While dieting has become less popular over time, there are still some trends that exist within the data. <br>
                     <Br> As you can see below, there is a pattern when people in the United States search for diets. This search interest peaks each year in January, most likely due to new years resolutions.There is also a small peak that occurs in the summer months. </p>
-                <img src=img/monthly-01.svg width="" class="center" alt="monthly-01" border="0">
+                <img src=img/monthly-01.svg width="" class="center, img-fluid" alt="monthly-01" border="0">
 
           
         </div>
@@ -123,9 +123,9 @@
 
 <div class='col , center1' >                <br><br>
                 <img src="https://i.ibb.co/bHzMLHV/IMG-0067.png" alt="IMG-0067" border="0" class="center, img-fluid" width="">
-                <p>Top 15 diets per year.</p>
+                <p>Top 10 diets per year.</p>
 
-                <div class="dropdown">
+               <div class="dropdown">
                     <button class="dropbtn">Select a Year &#8964;</button>
                     <div class="dropdown-content">
                         <button class="plain" id="y2004">2004</button> <br>
@@ -149,6 +149,8 @@
 
                 </div>
 
+                <div id="changing_bars">
+    </div>
 
                 <br><br>
             </div>
@@ -158,40 +160,49 @@
      
 <div class='col , center1' >                <img src="https://i.ibb.co/2hR1pg2/Untitled-Artwork-28.png" alt="Untitled-Artwork-28" border="0" class="center, img-fluid" width="">
                 <img src=img/paleo_5.svg width="" class="center2, img-fluid" alt="monthly-01" border="0">
+                </div>
 
+               
+               <div class='col , center1' >                <br><br>
                 <img src="https://i.ibb.co/Br7cWrj/notlast.png" alt="notlast" border="0" class="center, img-fluid" width="">
                 <img src=img/southbeach4.svg width="" class="center2, img-fluid" alt="monthly-01" border="0">
+                </div>
+                
+                <div class='col , center1' >                <br><br>
 
-                <h2>Recently Popular</h2>
+                <img src="/img/recent.png" alt="notlast" border="0" class="center, img-fluid" width="">
                 <img src=img/keto-03.svg width="" class="center2, img-fluid" alt="monthly-01" border="0">
 
             </div>
     
 
        
-<div class='col , center1' >
-                <img src="https://i.ibb.co/17zdDHL/Untitled-Artwork-27.png" alt="Untitled-Artwork-27" border="0" class="center, img-fluid" width="">
+<div class='col , center1' ><br><Br>
+                <img src="/img/dietyn.png" alt="Untitled-Artwork-27" border="0" class="center, img-fluid" width="">
+             
 
-                <ol class="center">
-                    Top 5 most searched for diets since 2004 are:
-                    <li> Weight Watchers</li>
-                    <li> Biggest Loser</li>
-                    <li>Keto Diet </li>
-                    <li>Whole30</li>
-                    <li>Paleo Diet </li>
-
-                </ol>
-
+              <p> The top 5 most searched for diets since 2004 are: <strong> Weight Watchers,
+Detox diets,
+The Keto Diet,
+The Paleo Diet, and
+Whole30. </strong>
+</p>
+<p> Select an option from the menu to find out the dos and don'ts for each diet. </p> 
                 <select class="center" onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
-    <option value="https://image.ibb.co/kosGFL/Untitled-Artwork-11.png" selected>Paleo</option>
-    <option value="https://image.ibb.co/nNOWzf/brocoli.png">Atkins</option>
-    <option value="https://image.ibb.co/jhFBzf/grape.png">Weight Watchers</option>
+    
+      <option value="img/diets2-01.svg">Weight Watchers</option>
+    <option value="img/diets2-02.svg"> Paleo Diet</option>
+    <option value="img/diets2-03.svg">Detox Diets</option>
+    <option value="img/diets2-04.svg">The Keto Diet</option>
+    <option value="img/diets2-05.svg">Whole30</option>
+    
+    
 </select>
 
                 <br><br>
 
-                <img id="imageToSwap" class="profile, center" src="https://image.ibb.co/kosGFL/Untitled-Artwork-11.png">
-
+                <img id="imageToSwap"  class=" center5" src="img/diets2-01.svg">
+<br><br>
             </div>
         </div>
   
@@ -200,7 +211,7 @@
 
 
     <footer>
-
+Project by Carolina Diaz
     </footer>
 
 
@@ -231,17 +242,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-    <script>
-        var screenWidth = window.innerWidth;
-        var visibleElements = jQuery(":visible");
-        visibleElements.each(function() {
-            var $this = jQuery(this);
-            if ($this.width() > screenWidth) {
-                $this.css("border", "1px solid green");
-                console.log("Screen width is " + screenWidth + " and the following element is " + $this.width(), $this);
-            }
-        });
-    </script>
+
 
 
 </body>
