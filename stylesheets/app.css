@@ -98,6 +98,8 @@ background-position:center;
     width: 30%;
 }
 
+
+
 .center5 {
     display: block;
     margin-left: auto;
@@ -8065,6 +8067,19 @@ p {
     line-height: 1.7;
     font-weight: 400;
 }
+
+footer {
+     font-family: 'Lato', sans-serif;
+    margin: 0 auto;
+    margin-bottom: 1.3em;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 200;
+    text-align: center; 
+     margin-left: auto;
+    margin-right: auto;
+  background-color: #FAFBFC;
+}
 /* line 245, ../bower_components/foundation/scss/foundation/components/_type.scss */
 p.lead {
   font-size: 1.21875rem;
@@ -9928,23 +9943,9 @@ ol {
 
 
 /* line 92, ../scss/app.scss */
-footer {
-  background-color: #E0E0E0;
-}
+
 /* line 95, ../scss/app.scss */
-footer p {
-  color: #4C73B8;
-  margin-bottom: 0;
-  margin-top: 20px;
-}
-/* line 100, ../scss/app.scss */
-footer a {
-  color: #52524E;
-}
-/* line 102, ../scss/app.scss */
-footer a:hover {
-  color: #4C73B8;
-}
+
 
 /* line 110, ../scss/app.scss */
 .axis path,
